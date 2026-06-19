@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+    <motion.div
+      whileHover={{
+        y: -10,
+        scale: 1.03,
+      }}
+      transition={{ duration: 0.3 }}
+      className="bg-white rounded-xl overflow-hidden shadow-lg"
+    >
       <img
         src={product.image}
         alt={product.name}
@@ -19,12 +27,12 @@ const ProductCard = ({ product }) => {
         </p>
 
         <Link to={`/product/${product.id}`}>
-          <button className="bg-black text-white px-4 py-2 rounded-lg mt-4 w-full">
+          <button className="bg-black text-white px-4 py-2 rounded-lg mt-4 w-full hover:bg-gray-800 transition">
             View Product
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
