@@ -12,7 +12,6 @@ import ProductDetails from "./pages/ProductDetails";
 function App() {
   return (
     <BrowserRouter>
-
       <Navbar />
 
       <Routes>
@@ -24,7 +23,6 @@ function App() {
       </Routes>
 
       <Footer />
-
     </BrowserRouter>
   );
 }
